@@ -47,5 +47,12 @@ public abstract class Car {
 	public void setSeatNumber(int seatNumber) {
 		this.seatNumber = seatNumber;
 	}
+	
+	@Override
+	public String toString() {
+		return "Model: " + getModelCar() + ", Registration number: " + getRegistrationNumber()
+		+ ", Car cost: " + getCarCost() + ", Fuel spend: " + getFuelSpend() + ", Number of seats:"
+		+ getSeatNumber() + ".";
+	}
 
 }
