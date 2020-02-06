@@ -19,7 +19,9 @@ public class Main {
 		taxipark1.addCar(new Minivan("Opel", 18956789, 32000, 4));
 		taxipark1.addCar(new Coupe("Ford", 438956789, 18000, 3));
 		taxipark1.addCar(new Minivan("Opel", 28956789, 28000, 5));
-		System.out.println("Park cost: " + TaxiparkCost.calculateTaxiparkCost(taxipark1));
+		taxipark1.showTaxiparkCost();
+		taxipark1.addCar(new Minivan("Opel", 28956789, 28000, 5));
+		taxipark1.showTaxiparkCost();
 		taxipark1.printTaxipark();
 		Taxipark taxipark2 = SortingTaxipark.sortTaxiparkByFuelSpend(taxipark1);
 		System.out.println("Taxipark is sorted by fuel spend");
@@ -27,6 +29,7 @@ public class Main {
 		Taxipark taxipark3 = new Taxipark(taxipark1.getSearchedCars("Ford", 18000));
 		System.out.println("Searching results: ");
 		taxipark3.printTaxipark();
+		taxipark3.showTaxiparkCost();
 
 	}
 
